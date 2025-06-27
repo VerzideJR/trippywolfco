@@ -1,0 +1,180 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Trippy-Landy & Wolf-Connexion</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f3f3f3;
+      color: #222;
+    }
+
+    header {
+      background: #222;
+      color: white;
+      padding: 2rem 1rem;
+      text-align: center;
+    }
+
+    .main-wrapper {
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      gap: 3rem;
+      padding: 2rem;
+      flex-wrap: wrap;
+      max-width: 1300px;
+      margin: auto;
+    }
+
+    .logo-side {
+      width: 200px;
+      text-align: center;
+      cursor: pointer;
+      flex-shrink: 0;
+    }
+
+    .logo-side img {
+      width: 100%;
+      border-radius: 14px;
+      object-fit: cover;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+    }
+
+    .logo-side p {
+      margin-top: 0.7rem;
+      font-weight: bold;
+      font-size: 1.2rem;
+    }
+
+    .common-info {
+      background: white;
+      flex: 1 1 550px;
+      padding: 2rem;
+      border-left: 4px solid #444;
+      border-right: 4px solid #444;
+      box-shadow: 0 0 12px rgba(0,0,0,0.08);
+      min-width: 480px;
+      max-width: 700px;
+    }
+
+    .common-info h2 {
+      margin-top: 0;
+    }
+
+    .info-box {
+      display: none;
+      background: #fff;
+      padding: 1rem;
+      border-radius: 10px;
+      margin-top: 1rem;
+      box-shadow: 0 0 8px rgba(0,0,0,0.1);
+      animation: fadeIn 0.4s ease;
+    }
+
+    .info-box a {
+      color: #d86c00;
+      font-weight: bold;
+      text-decoration: underline;
+    }
+
+    @keyframes fadeIn {
+      from {opacity: 0;}
+      to {opacity: 1;}
+    }
+
+    .footer {
+      text-align: center;
+      margin: 4rem 0 2rem;
+      font-size: 0.9rem;
+      color: #777;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Trippy-Landy 👁️ & Wolf-Connexion 🐺</h1>
+    <p>Instructions 📋 | Modalités 🛅 | Fonctionnement 🧮</p>
+  </header>
+
+  <div class="main-wrapper">
+
+    <div class="logo-side" onclick="toggleInfo('trippy-info')">
+      <img src="trippy.jpg" alt="TrippyLandy">
+      <p>🌫️ TrippyLandy</p>
+      <div id="trippy-info" class="info-box">
+        ➤ Vitrolles & alentours, uniquement en meetup<br>
+        ➤ Livreur dispo dans les environs<br>
+        ➤ Meetup aussi proche Saint-Maximin avec livraison<br>
+        ➤ Produits du terroir variés, dm @TrippyLandy.13<br>
+        ➤ Contact via Signal<br>
+        ➤ <a href="https://menutrippylandy21-04.netlify.app" target="_blank">Voir le menu</a>
+      </div>
+    </div>
+
+    <section class="common-info">
+      <div class="block">
+        <h2>💬 Canaux de communication</h2>
+        <p>
+          📣 <strong>Canal Tchat principal Wolf-Landy 🇫🇷🧬</strong><br>
+          ➤ Pour toute question, doute ou demande : on est là pour répondre 🙌🏼🩺<br>
+          ➤ La bienveillance est la bienvenue 🫡🙏🏼<br><br>
+          🗣️ <strong>Canal Retours & Avis Wolf-Landy</strong><br>
+          ➤ Pour vos retours, commentaires, avis ou critiques constructives 📦<br>
+          ➤ Un compliment, un conseil, une suggestion ? N'hésitez pas ✍️<br>
+          ➤ Le tout dans le respect et l’instruction ✅✅✅
+        </p>
+      </div>
+
+      <div class="block">
+        <h2>✉️ Informations & Règles</h2>
+        <p>
+          La qualité des produits proposés ici est un critère <strong>ESSENTIEL</strong> et reste <strong>FONDAMENTALE</strong>.<br><br>
+          C’est grâce à ça que nous avons pu tracer notre route ici, proprement.<br><br>
+          ➤ On reste au maximum sur des produits de qualité<br>
+          ➤ On informe les nouveaux usagers, on respecte les expérimentés<br>
+          ➤ On donne des réponses claires, fiables et honnêtes<br>
+          ➤ Et surtout, on fait de notre mieux pour offrir un service fluide et humain ✅♥️<br><br>
+          Merci à vous tous 🫶<br>
+          — Trippy-Landy & Wolf-Connexion 🌈🐺
+        </p>
+      </div>
+    </section>
+
+    <div class="logo-side" onclick="toggleInfo('wolf-info')">
+      <img src="wolf.jpg" alt="Wolf Connexion">
+      <p>🐺 Wolf Connexion</p>
+      <div id="wolf-info" class="info-box">
+        ➤ Zone 06 & 83 :<br>
+        🚘 2 livreurs : Antibes & tout le 06/83<br>
+        📍 Sur place : Antibes (gare) & Mougins<br>
+        ➤ Si Antibes pas dispo, second dispo<br>
+        ➤ Contact via Signal
+      </div>
+    </div>
+
+  </div>
+
+  <div class="footer">
+    Transmission confidentielle & respectueuse
+  </div>
+
+  <script>
+    function toggleInfo(id) {
+      const element = document.getElementById(id);
+      const allBoxes = document.querySelectorAll('.info-box');
+      allBoxes.forEach(box => {
+        if (box.id !== id) box.style.display = 'none';
+      });
+      element.style.display = (element.style.display === 'block') ? 'none' : 'block';
+    }
+  </script>
+
+</body>
+</html>
+"""
