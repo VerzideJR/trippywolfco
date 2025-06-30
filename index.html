@@ -2,179 +2,165 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <title>Trippy-Landy & Wolf-Connexion</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>TrippyLandy & Wolf Connexion</title>
   <style>
+    * { box-sizing: border-box; }
     body {
-      font-family: 'Segoe UI', sans-serif;
       margin: 0;
-      padding: 0;
-      background: #f3f3f3;
-      color: #222;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #0b0b0b;
+      color: #eee;
     }
-
     header {
-      background: #222;
-      color: white;
+      text-align: center;
       padding: 2rem 1rem;
-      text-align: center;
+      background: linear-gradient(90deg, #111, #1e1e1e);
     }
-
-    .main-wrapper {
-      display: flex;
-      justify-content: center;
-      align-items: flex-start;
-      gap: 3rem;
-      padding: 2rem;
-      flex-wrap: wrap;
-      max-width: 1300px;
-      margin: auto;
+    header h1 {
+      font-size: 1.7rem;
+      color: #ffce63;
+      margin-bottom: 0.5rem;
     }
-
-    .logo-side {
-      width: 200px;
-      text-align: center;
-      cursor: pointer;
-      flex-shrink: 0;
+    .section {
+      padding: 1.5rem 1rem;
     }
-
-    .logo-side img {
-      width: 100%;
-      border-radius: 14px;
-      object-fit: cover;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+    .section h2 {
+      color: #ffce63;
+      font-size: 1.4rem;
+      margin-bottom: 1rem;
     }
-
-    .logo-side p {
-      margin-top: 0.7rem;
-      font-weight: bold;
-      font-size: 1.2rem;
-    }
-
-    .common-info {
-      background: white;
-      flex: 1 1 550px;
-      padding: 2rem;
-      border-left: 4px solid #444;
-      border-right: 4px solid #444;
-      box-shadow: 0 0 12px rgba(0,0,0,0.08);
-      min-width: 480px;
-      max-width: 700px;
-    }
-
-    .common-info h2 {
-      margin-top: 0;
-    }
-
     .info-box {
-      display: none;
-      background: #fff;
+      background-color: #1c1c1c;
       padding: 1rem;
-      border-radius: 10px;
-      margin-top: 1rem;
-      box-shadow: 0 0 8px rgba(0,0,0,0.1);
-      animation: fadeIn 0.4s ease;
+      border-radius: 8px;
+      margin-bottom: 2rem;
     }
-
-    .info-box a {
-      color: #d86c00;
-      font-weight: bold;
-      text-decoration: underline;
+    .split-container {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
     }
-
-    @keyframes fadeIn {
-      from {opacity: 0;}
-      to {opacity: 1;}
+    @media (min-width: 768px) {
+      .split-container {
+        flex-direction: row;
+      }
     }
-
+    .bloc {
+      flex: 1;
+      background-color: #151515;
+      padding: 1rem;
+      border-radius: 8px;
+    }
+    .bloc h3 {
+      margin-top: 0;
+      font-size: 1.3rem;
+    }
+    .eye { color: #a684ff; }
+    .wolf { color: #6cffc5; }
     .footer {
       text-align: center;
-      margin: 4rem 0 2rem;
-      font-size: 0.9rem;
-      color: #777;
+      padding: 1rem;
+      font-size: 0.8rem;
+      background-color: #111;
+      color: #888;
     }
   </style>
 </head>
 <body>
 
-  <header>
-    <h1>Trippy-Landy 👁️ & Wolf-Connexion 🐺</h1>
-    <p>Instructions 📋 | Modalités 🛅 | Fonctionnement 🧮</p>
-  </header>
+<header>
+  <h1>TrippyLandy 👁️ & Wolf Connexion 🐺</h1>
+</header>
 
-  <div class="main-wrapper">
+<section class="section">
+  <h2>📜 Informations générales & règles</h2>
+  <div class="info-box">
+    <p>
+      La qualité des produits proposés ici est un critère <strong>ESSENTIEL</strong> et reste <strong>FONDAMENTALE</strong>.<br><br>
+      Et c’est pourquoi nous avons réussi à frayer notre chemin ici.<br><br>
+      Rester un maximum sur des produits de qualité, informés des nouveaux usagers ET expérimenté avec des réponses fiables et poussées. Et SURTOUT toujours essayer de faire au mieux pour offrir un service de qualité ✅♥️<br><br>
+      <strong>Chat principal de Wolf-Landy 🇫🇷🧬</strong><br>
+      Questions ? Doutes ? Ou autres : Nous y répondrons 🙌🏼🩺<br>
+      La bienveillance est la bienvenue 🫡🙏🏼<br><br>
+      <strong>Canal Retour/Avis Wolf-Landy</strong><br>
+      Canal pour les retours/avis et TD 📦<br>
+      N'hésitez pas ✍️ ! Un avis, un commentaire, un compliment ou une critique 🫡🙏<br>
+      Le tout dans le respect et l'instruction ✅✅✅
+    </p>
+  </div>
+</section>
 
-    <div class="logo-side" onclick="toggleInfo('trippy-info')">
-      <img src="trippy.jpg" alt="TrippyLandy">
-      <p>🌫️ TrippyLandy</p>
-      <div id="trippy-info" class="info-box">
-        ➤ Vitrolles & alentours, uniquement en meetup<br>
-        ➤ Livreur dispo dans les environs<br>
-        ➤ Meetup aussi proche Saint-Maximin avec livraison<br>
-        ➤ Produits du terroir variés, dm TrippyLandy <br>
-        ➤ Contact via Signal<br>
-        ➤ <a href="https://menutrippylandy21-04.netlify.app" target="_blank">Voir le menu</a>
-      </div>
+<section class="section">
+  <div class="split-container">
+
+    <div class="bloc">
+      <h3 class="eye">👁️ TrippyLandy</h3>
+      <p>
+        • Zone : Vitrolles et alentours (Meetup uniquement)<br>
+        • Livraison Marseille assurée par @Kitano<br>
+    • Planning en bas de page ⏬<br>
+        • Produit du terroir variés — DM <strong>@TrippyLandy.13</strong><br>
+        • Contact & confirmation via Signal<br>
+        • Menu : <a href="https://menutrippylandy21-04.netlify.app" target="_blank">Accéder</a>
+      </p>
     </div>
 
-    <section class="common-info">
-      <div class="block">
-        <h2>💬 Canaux de communication</h2>
-        <p>
-          📣 <strong>Canal Tchat principal Wolf-Landy 🇫🇷🧬</strong><br>
-          ➤ Pour toute question, doute ou demande : on est là pour répondre 🙌🏼🩺<br>
-          ➤ La bienveillance est la bienvenue 🫡🙏🏼<br><br>
-          🗣️ <strong>Canal Retours & Avis Wolf-Landy</strong><br>
-          ➤ Pour vos retours, commentaires, avis ou critiques constructives 📦<br>
-          ➤ Un compliment, un conseil, une suggestion ? N'hésitez pas ✍️<br>
-          ➤ Le tout dans le respect et l’instruction ✅✅✅
-        </p>
-      </div>
-
-      <div class="block">
-        <h2>✉️ Informations & Règles</h2>
-        <p>
-          La qualité des produits proposés ici est un critère <strong>ESSENTIEL</strong> et reste <strong>FONDAMENTALE</strong>.<br><br>
-          C’est grâce à ça que nous avons pu tracer notre route ici, proprement.<br><br>
-          ➤ On reste au maximum sur des produits de qualité<br>
-          ➤ On informe les nouveaux usagers, on respecte les expérimentés<br>
-          ➤ On donne des réponses claires, fiables et honnêtes<br>
-          ➤ Et surtout, on fait de notre mieux pour offrir un service fluide et humain ✅♥️<br><br>
-          Merci à vous tous 🫶<br>
-          — Trippy-Landy & Wolf-Connexion 🌈🐺
-        </p>
-      </div>
-    </section>
-
-    <div class="logo-side" onclick="toggleInfo('wolf-info')">
-      <img src="wolf.jpg" alt="Wolf Connexion">
-      <p>🐺 Wolf Connexion</p>
-      <div id="wolf-info" class="info-box">
-        ➤ Zone 06 & 83 :<br>
-        🚘 2 livreurs : Antibes & tout le 06/83<br>
-        📍 Sur place : Antibes (gare) & Mougins<br>
-        ➤ Si Antibes pas dispo, second dispo<br>
-        ➤ Contact via Signal
-      </div>
+    <div class="bloc">
+      <h3 class="wolf">🐺 Wolf Connexion</h3>
+      <p>
+        • Zones couvertes : tout le 06 + 83<br>
+        • 2 livreurs actifs<br>
+        • Sur place : Antibes (proche gare) + Mougins<br>
+        • Si Antibes n'est pas dispo, une solution est toujours proposée 🤝<br>
+        • Contact via Signal
+      </p>
     </div>
 
   </div>
+</section>
 
-  <div class="footer">
-    Transmission confidentielle & respectueuse
+<div class="footer">
+  Transmission confidentielle & respectueuse – Mobile first 🌐
+</div>
+
+
+<section class="section">
+  <h2>📍 PLANNING MARSEILLE — LIVRAISON 🚘</h2>
+  <div class="info-box">
+    <p>
+      📩 → Contact <strong>@Kitano</strong> pour ORGANISER votre livraison à l’avance !<br>
+      📩 → <strong>@TrippyLandy 👁️🔌</strong><br><br>
+
+      ╭─✦︵✦︵✦︵✦︵✦︵✦─╮<br>
+      <strong>MARDI - MERCREDI - JEUDI</strong><br>
+      🕓 19h30 ~ 23h/ 00h ✅<br>
+      ╰─✦︶✦︶✦︶✦︶✦︶✦─╯<br><br>
+
+      OCCASIONNELLEMENT 🔀 (quand il n’y a pas FREE 🔊)<br>
+      ╭─✦﹏✦﹏✦﹏✦─╮<br>
+      <strong>VENDREDI 🎉🥳</strong><br>
+      🕓 19H ~ 4H ✅<br>
+      ╰─✦﹏✦﹏✦﹏✦─╯<br><br>
+
+      ╭─✦∿✦∿✦∿✦∿✦─╮<br>
+      <strong>SAMEDI</strong><br>
+      🕛 12h ~ 00h ✅<br>
+      <strong>DIMANCHE</strong><br>
+      🕗 08h ~ 12h ✅<br>
+      ╰─✦∿✦∿✦∿✦∿✦─╯<br><br>
+
+      🚨 <strong>IMPORTANT</strong> 🚨<br>
+      🔄 Horaires flexibles — Vous serez prévenu en avance via annonce<br>
+      📢 Merci de suivre les news régulièrement<br>
+      📲 <strong>TOUTE ORGANISATION LIVRAISON À MARSEILLE = @Kitano</strong><br><br>
+      💸 <strong>Commande minimum de 30€ pour les livraisons uniquement</strong><br><br>
+
+      👁️💫 Merci pour votre énergie,<br>
+      <strong>L’équipe Trippy-Landy 🌌</strong>
+    </p>
   </div>
-
-  <script>
-    function toggleInfo(id) {
-      const element = document.getElementById(id);
-      const allBoxes = document.querySelectorAll('.info-box');
-      allBoxes.forEach(box => {
-        if (box.id !== id) box.style.display = 'none';
-      });
-      element.style.display = (element.style.display === 'block') ? 'none' : 'block';
-    }
-  </script>
-
+</section>
 </body>
 </html>
-"""
